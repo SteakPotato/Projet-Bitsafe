@@ -1,7 +1,7 @@
 
 
 
-## Projet Synthèse - BitSafe Password Manager
+## Projet Synthèse - [BitSafe Password Manager](https://bitsafevault.com/)
 [Ceci](https://bitsafevault.com/)  est  une  application  web  qui    fait  de  la  gestion  de  mots  de  passe  pour un utilisateur.
 ## Description du projet
 Cette application permet aux utilisateurs de sauvegarder leur information associée à un compte et de les recopier facilement. Autrement dit, de gérer leur mot de passe. On peut également générer des nouveaux mots de passe selon les paramètres de l'utilisateur.
