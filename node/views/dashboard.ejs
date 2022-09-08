@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bitsafe - Password Manager</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <link rel="stylesheet" href="/css/form.css">
+        <link rel="stylesheet" href="/css/dashboardform.css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M3WSQCMSDD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M3WSQCMSDD');
+</script>
+    </head>
+<body>
+    <body id = 'body-dashboard'>
+        <div class = 'side'>
+            <div class = 'side-nav'>
+                <a class ='home' href="javascript: void(0)">
+                    <img src='/img/home-white-18dp.svg'> 
+                    <div>home</div> 
+                </a>
+                <a class ='accounts' href="javascript: void(0)">
+                    <img src='/img/account_box-white-18dp.svg'>
+                    <div>Accounts</div>
+                </a>
+                <a class ='password' href="javascript: void(0)">
+                    <img src='/img/password-white-18dp.svg'>
+                    <div>Create Passwords</div>
+                </a>
+
+                <a class ='logout' href="/users/logout">
+                    <img src='/img/logout-white-18dp.svg'>
+                    <div>Logout</div> 
+                </a>
+            </div>
+        </div>
+        </div>
+        <main class="page-wrap">
+            <%- include ('partials/home'); %> 
+        </main>
+        <script type="module" src="/js/dashboard.js"></script>
+    </body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8MTLZP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->

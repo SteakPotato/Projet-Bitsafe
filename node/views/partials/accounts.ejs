@@ -1,0 +1,61 @@
+
+
+<% if(locals.user.account.length >= 1) {%> 
+    <div class = accountbar>
+        <h2>All Accounts</h2>
+        <a class = 'addbtn' href="javascript: void(0)">Add Account</a>
+    </div>
+    <div class = 'accountwrap'>
+        <% for(var i = 0; i < user.account.length ; i++) { %>
+            <div class = 'account' href="javascript: void(0)">
+                <div id ="num_ <%= i%>" class = 'accountHover'>
+                    <div class = 'AccountName'>
+                        <% if(user.account[i].validurl == false) {%> 
+                            <div class = 'iconimg'style="background-color:<%= user.account[i].color  %>;">
+                        <% } else {%>
+                            <div class = 'iconimg'>
+                        <% } %>
+                            <% if(user.account[i].validurl == false) {%> 
+                                <div class = 'imgName' ><%= user.account[i].titre.substr(0, 2) %> </div>
+                            <% } else {%>
+                                <%if(user.account[i].validurl == true){%>
+                                    <img class="iconclass" id="imgIcon" src="<%= user.account[i].url + "/favicon.ico" %>" width="32" height="32">
+                                <% } %>
+                            <% } %>
+                        </div>
+                        <div class = 'div-info'>
+                            <div class = 'titre-div'><%= user.account[i].titre %> </div>
+                            <div class = 'username-div'><%= user.account[i].username %></div>
+                        </div>
+                    </div>
+                    <div class = 'time'><div>Updated : <%= user.account[i].updatedAt.toString().substr(0,21) %> </div> </div>
+                </div>
+                <div class = 'spacebtn'>
+                    <div class = 'dropdown-container'>
+                        <img class ='optionbtn' src='/img/more.svg' width="24" height="24">
+                        <div id ="num_ <%= i%>" class ='dropdown'>
+                            <a id = 'copyuser' href="javascript: void(0)">Copy Username/Email</a>
+                            <a id = 'copypass' href="javascript: void(0)">Copy Password</a>
+                            <a id = 'dropEdit' href="javascript: void(0)">Edit</a>
+                            <a id = 'dropDelete' href="javascript: void(0)">Delete </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+<% }else {%>
+        <div class="get-started-container">
+            <div class = "get-started">
+                <img src="/img/Social Media_Isometric.svg" alt="">
+                <h1>Let's Get Started</h1>
+                <p>Add your first account. You'll find it here whenever you need it</p>
+                <a class = 'addbtn' href="javascript: void(0)">Add Account</a>
+            </div>
+
+        </div>
+        
+        
+
+    <% } %>
+</div>
+

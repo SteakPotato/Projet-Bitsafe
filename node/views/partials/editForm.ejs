@@ -1,0 +1,39 @@
+<div class="form-popup" id="myForm">
+    <form class="add-form-container" id ="account_ <%= number%>" autocomplete="off">
+      
+      <div class = "icon-container">
+        <div class = 'iconimg'>
+        </div>
+      </div>
+      <div class="field">
+        <input class="fieldinput" id="titre" maxlength="250" type="text" value = <%= user.account[number].titre%>   name ='titre' required> 
+        <label class = 'fieldlabel' for="titre">Title*</label>
+      </div>
+      <div class="field">
+        <input class="fieldinput" id="email" maxlength="250" type="text" value = <%= user.account[number].username %>  name ='username'   required> 
+        <label class = 'fieldlabel' for="username">Email or Username*</label>
+      </div>
+
+      <div class="field">
+        <input class="fieldinput" id="hash" maxlength="250" type="password"  name ='hash'   required> 
+        <label class = 'fieldlabel' for="hash">Enter Password*</label>
+        <input id='variableJSON'  value =<%= hash %>  required> 
+        
+        <input type="checkbox" id="eye" />
+        <label class = "eyelabel"for="eye"></label>
+      </div>
+  
+      
+      <div class="field">
+        <input class="fieldinput" id="url" maxlength="250" type="text" value = <%= user.account[number].url%> name ='url'   required> 
+        <label class = 'fieldlabel' for="url">Website url*</label>
+      </div>
+
+      <div class = 'controlbtn'>
+        <input id ='submit' class="btnsubmit" type="submit" value = 'Save'></input>
+        <input id ='cancel' class="btncancel" type="button" value = 'Cancel'>
+      </div>
+    </form>
+  </div> 
+
+  

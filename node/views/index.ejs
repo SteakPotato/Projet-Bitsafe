@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bitsafe - Password Manager</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <link rel="stylesheet" href="/css/form.css">
+        <script src="/js/landing.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M3WSQCMSDD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M3WSQCMSDD');
+</script>
+    </head>
+<body>
+  <body>
+    <div class = "page-wrapper">
+            <header class = "menu">
+                <div>
+                    <img src="/img/undraw_safe_bnk7.svg" alt="">
+                    <h1><a href="/">BitSafe</a></h1>
+                </div>
+                <input class="menu-btn" type="checkbox" id="menu-btn">
+                <label for="menu-btn"><span class="navicon"></span></label>
+                <div class="menu-mobile">
+                    <a href="javascript: void(0)" onClick="document.querySelector('#intro-about').scrollIntoView({behavior: 'smooth'});">About</a> 
+                    <a href="javascript: void(0)" onClick="document.querySelector('.contact').scrollIntoView({behavior: 'smooth'});">Contact</a>
+                    <a href="/users/login">Login</a>
+                    <a href="/users/register">Register</a>
+                </div>
+                
+            </header>
+            
+        <main id= "main-wrap" class ='fade-in'>
+            <div id = "intro" >
+                <img src="/img/undraw_safe_bnk7.svg" alt="">
+                <div class = "intro-text">
+                    
+                    <h1>THE MORE STRONG YOUR PASSWORD THE MORE SECURE YOU ARE</h1>
+                    <p>Try the password manager that regroup all you need in one place.</p>
+                    <p class = "intro-button"><a href="/users/register" >Get Started</a></p>
+                
+                </div>
+            </div>
+            <div id = "intro-about" >
+                <img src="/img/undraw_authentication_fsn5.svg" alt="">
+                <div class = "intro-text">
+                    <h1>MANAGES YOUR ACCOUNTS AND GENERATES STRONG PASSWORDS</h1>
+                    <p>BitSafe lets you easily manage your password with no hassle. Create and save strong password with one click</p>
+                </div>
+            </div>
+            <div class = contact >
+                <form action="/sendemail" id="contact-form" method="post" role="form" autocomplete="off">
+                    <h1>SEND US A MESSAGE</h1>
+                      <input id="name"  name="name" type="text" placeholder="Your name" required></input>
+                      <input id="email" name="email" type="text" placeholder="Your email" required>
+                      <input id="subject" name="subject" type="text" placeholder="Subject" required>
+                      <textarea id="message" name="message" placeholder="Enter your message here" rows="3" required></textarea>
+                      <button  type="submit">Submit</button>
+                  </form>
+            </div>
+            
+        </main>
+        <footer>
+            
+      
+        </footer>
+    </div>
+  </body>
+  <script>
+      
+  </script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bitsafe - login</title>
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/dashboard.css">
+        <link rel="stylesheet" href="/css/form.css">
+        <script src="/js/landing.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M3WSQCMSDD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M3WSQCMSDD');
+</script>
+    </head>
+<body>
+  <body>
+    <div class = "page-wrapper">
+        <header class = "menu">
+          <div>
+            <img src="/img/undraw_safe_bnk7.svg" alt="">
+            <h1><a href="/">BitSafe</a></h1>
+        </div>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label for="menu-btn"><span class="navicon"></span></label>
+        <div class="menu-mobile">
+            <a href="/users/register">Register</a>
+        </div>
+      </header>
+      <main id = 'main-content' class = fade-in>
+          <div class = login>
+            <div class = login-container>
+              <div class = "logo">
+                <div>
+                  <h1>Login</a></h1>
+                  <p>Welcome Back</p>
+                  <%- include ('./partials/messages') %>
+                </div>
+              </div>
+              <form action="/users/login" method="post" autocomplete="off">
+
+                  <div class="form-container">
+              
+                    <input type="text" maxlength="250" placeholder="Username or Email" autofocus = "" name="email" required>
+          
+                    <input type="password" maxlength="250" placeholder="Master Password" name="password" required>
+                
+                    <button type="submit">Login</button>
+                    
+                  </div>
+                  <div class="register-container" >
+                    <p>Don't have an account ? <a href="/users/register">Register</a></p>
+                  </div>
+                </form>
+            </div>
+            
+          </div>
+      </main>
+    </div>
+    
+  </body>

@@ -1,0 +1,147 @@
+.form-popup{
+  display: flex;
+  justify-content: center;
+
+  padding-top: 2%;
+}
+.add-form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+}
+.add-form-container .field {
+  margin-bottom: 40px;
+}
+
+
+.field {
+  position: relative;
+  width: 100%;
+  margin-bottom:20px;
+}
+.field img {
+  position: absolute;
+  top: 50%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+}
+#eye{
+  display: none;
+}
+.eyelabel {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  padding: 5px;
+  top: 50%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+  background-image: url("/img/eye.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+#eye:checked + .eyelabel{
+  background-image: url("/img/private.svg");
+
+}
+.field .fieldCopy{
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(50%, -50%);
+}
+
+.field .fieldinput {
+
+  height: 40px;
+  width: 100%;
+  background-color: #343a400a;
+  transition: 0.2s ease all;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+}
+.field .fieldinput[type=text] {
+  color: rgb(78, 78, 78);
+  font-weight: bolder;
+
+}
+.field .fieldinput:focus,
+.field .fieldinput:hover  {
+  outline: none;
+  background-color: #fff;
+}
+.field .fieldinput:valid{
+  background-color: #343a400a;
+}
+.field .fieldlabel {
+  color: rgb(78, 78, 78);
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 15px;
+  
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.field .fieldinput:focus ~ .fieldlabel,
+.field .fieldinput:valid ~ .fieldlabel{
+  font-size: 12px;
+  top: -15px;
+}
+
+.controlbtn{
+  display: flex;
+  justify-content: flex-start;
+}
+.controlbtn input{
+  border-radius: 3px;
+  color: white;
+  padding: 10px 20px;
+  outline: none;
+  transition: 0.3s;
+  margin-right:20px;
+  -webkit-appearance: none;
+}
+.controlbtn .btnsubmit {
+  background-color: #B84900;
+  border: none;
+}
+.controlbtn .btncancel{
+  background-color: #fff;
+  border: 1px solid #2325271e;
+  color: rgb(78, 78, 78);
+}
+.controlbtn .btnsubmit:hover {
+  background-color: #a44200;
+}
+.controlbtn .btncancel:hover {
+  background-color: rgb(241, 241, 241);
+
+}
+
+.controlbtn input:active {
+  transform: scale(0.95);
+}
+.icon-container{
+  margin-bottom: 40px;
+}
+.iconimg{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: rgb(241, 241, 241);
+
+}
+
+
+
+

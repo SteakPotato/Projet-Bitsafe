@@ -1,0 +1,49 @@
+
+<div class ="generate-container">
+
+    <div class = "content-input">
+        <div class = "intro-generate">
+            <h2>BitSafe - Password Generator Tool</h2>
+            <p>Instantly create a random and secure password using our online password generator.</p>
+        </div>
+        <div class ='password-box'>
+            <input class = 'output' type="text" maxlength="250"  name="password" type = 'text'  autocomplete="off" readonly onfocus="this.removeAttribute('readonly');">
+            <a class = 'copypass' href='javascript: void(0)'> 
+                <div class = "copymsg hidden" >copied</div>
+            </a>
+        </div>
+        <div class ='range-container'>
+            <div>Length</div>
+            <div class = 'range-input'>
+                <input class = 'range-slider' type="range" min="1" max="250" value ='16' name="range">
+                <div class="bubble">16</div>
+            </div>
+        </div>
+        <div class ='label-container'>
+            <div class ='check-container'>
+                <div>Use Numbers (0-9)</div>
+                <input class = 'check-generate' id = 'number' type="checkbox"  name="number" checked>
+                <label class = 'generate-label' for="number"></label>
+            </div>
+            <div class ='check-container'>
+                <div>Use Lowercases (a-z)</div>
+                <input class = 'check-generate' id = 'lowercase' type="checkbox"  name="lowercase" checked>
+                <label class = 'generate-label' for="lowercase"></label>
+            </div>
+            <div class ='check-container'>
+                <div>Use Uppercases (A-Z)</div>
+                <input class = 'check-generate' id = 'uppercase' type="checkbox"  name="uppercase" checked>
+                <label class = 'generate-label' for="uppercase"></label>
+            </div>
+            <div class ='check-container'>
+                <div>Use Symbols (!@#$%)</div>
+                <input class = 'check-generate' id = 'symbol' type="checkbox"  name="symbol" checked>
+                <label class = 'generate-label' for="symbol"></label>
+            </div>
+            <div class ="control">
+                <a class = 'button' href='javascript: void(0)'>Generate </a>
+                <a class = 'copy' href='javascript: void(0)'>Save Password</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,377 @@
+  @font-face {
+    font-family: nunito;
+    src: url(/fonts/Nunito-Regular.ttf);
+    font-weight: normal;
+    font-style: normal; 
+  }
+
+  html, body{
+    min-height:100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    background-color: #fff;
+    font-family: nunito;
+    height:100vh;
+    margin:0;
+    padding: 0;
+    
+  }
+  h2,h3,h4,h5,h6{
+    font-weight: 500;
+  }
+  h2{
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li{
+    list-style: none;
+  }
+  ul{
+      padding: 0;
+
+  }
+  a,a:visited{
+    text-decoration: none;
+    color:#2d3142;
+  }
+  a,.menu label{
+    -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  
+  }
+  .list li a:link , .list li a:visited  {
+    background-color: #fff;
+    color: #2d3142;
+    padding: 5px 10px;
+    
+  }
+  .list li a:hover {
+    color: white;
+    background-color: #2d3142;
+    border-radius: 5%;
+  }
+  li a:active {
+    background-color: #fff;
+    color: #2d3142;
+  }
+
+  /*fade in*/
+  .fade-in {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    }
+    @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+  
+
+
+
+  #main-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      
+  }
+
+/*Menu */
+.menu{
+  display: flex;
+  z-index: 1000;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
+  position: fixed;
+  align-self: flex-start;
+  overflow: hidden;
+  top: 0;
+ 
+  }
+  .menu h1{
+    margin: 0;
+  }
+.menu > div:nth-child(1){
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+  
+  }
+.menu img {
+  width: 50px;
+  height: 50px; 
+}
+.nav{
+  display: flex;
+}
+
+/* hambruger*/
+.menu .menu-mobile{
+  display: flex;
+}
+.menu-mobile a:nth-child(-n + 2):hover{
+  background-color: #343a400a;
+}
+.menu-mobile a:nth-last-child(-n + 2):hover{
+  color: white;
+  background-color: #2d3142;
+}
+.menu-mobile a{
+  display: flex;
+  align-items: center;
+  padding: 4px 20px;
+  border-right: 1px solid #f4f4f4;
+}
+.menu label {
+  display: none;
+  cursor: pointer;
+  padding: 28px 20px;
+  position: relative;
+}
+.menu label .navicon {
+  background: #333;
+  display: none;
+  height: 2px;
+  position: relative;
+  transition: all .2s ease-out;
+  width: 18px;
+}
+.menu label .navicon:before,
+.menu label .navicon:after{
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.menu label .navicon:before{
+  top: 5px;
+}
+.menu label .navicon:after{
+  top: -5px;
+}
+.menu .menu-btn{
+  display: none;
+}
+.menu .menu-btn:checked ~ label .navicon{
+  background: transparent;
+}
+.menu .menu-btn:checked ~ label .navicon:before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.menu .menu-btn:checked ~ label .navicon:after{
+  transform: rotate(45deg);
+  top: 0;
+}
+
+    
+/*intro et contact*/
+main #intro, main .contact{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+/*Intro*/
+#intro{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#intro-about{
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+#intro-about img {
+   max-width: 50%;
+    max-height: 50%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: block;
+}
+#intro img {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: block;
+}
+#intro .intro-text >*{
+  margin-bottom: 5vh;
+}
+.intro-button a ,.intro-button a :visited{
+    color: white;
+    background-color: #A44200;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 5%;
+    padding: 0.5em;
+    transition: 0.2s;
+}
+.intro-button :hover{
+    box-shadow: 0 5px 25px 0 rgb(0 0 100 / 20%);
+}
+
+
+
+/*CONTACT FORM*/
+.contact{
+  width: 80%;
+  max-width: 950px;
+}
+.contact form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.contact form input,.contact form button{
+  height: 40px;
+  
+}
+/*Input , champs text et bouton*/
+.contact form input,.contact form textarea,.contact form button ,.contact form h1{
+  width: 100%;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #f6f6f6;
+  resize:vertical;
+  margin-bottom: 20px;
+}
+.contact form h1{
+  border: none;
+}
+.contact form input:focus,.contact form textarea:focus{
+  outline: none !important;     
+  border-color: #3f3d56;
+  border: 1px solid #3f3d56;
+   
+}
+.contact form button{
+  border-radius: 3px;
+  color: white;
+  background-color: #3f3d56;
+  padding: 15px 32px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+}
+.contact form button:active{
+  transform: scale(0.95);
+}
+.contact form button:hover{background-color:#3f3d56dc; }
+
+.contact form button:focus{background-color:#3f3d56; }
+
+
+
+
+
+
+/*mobile*/
+
+
+@media only screen and (max-width : 768px) {
+  main #intro, main .contact {
+    margin-top: 10vh;
+}
+ .page-wrapper h1{
+   font-size: 20px;
+ }
+ .menu label {
+  display: block;
+}
+ .menu label .navicon{
+   display: block;
+ }
+ .menu .menu-btn:checked ~ .menu-mobile{
+
+  max-height: 300px
+}
+ .menu .menu-mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  max-height: 0;
+  width: 100vw;
+  color: white;
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+.menu .menu-mobile a{
+  display: flex;
+  border: none;
+   padding: 20px 0;
+   width: 100%;
+   justify-content: center;
+}
+
+ .menu .menu-default{
+   display: none;
+ }
+
+
+}
+@media only screen and (max-width : 500px) {
+  #intro-about{
+    max-width: 80%;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  #intro-about img {
+    max-width: 80%;
+    max-height: 80%;
+
+}
+
+
+
+
+}
+@media only screen and (max-width : 320px) {
+  main #intro, main .contact {
+    margin-top: 10vh;
+}
+  .page-wrapper h1{
+    font-size: 15px;
+  }
+}
